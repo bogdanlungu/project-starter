@@ -8,4 +8,4 @@
 3. Go inside the folder you created with the `git clone` command (or where you downloaded the files from Github).
 4. Run `npm install` in order to install all the npm packages.
 5. Run `npm start` after the packages are installed for development mode.
-6. Run `npm build` to generate the build in the /dist folder.     
+6. Run `npm run build` to generate the build in the /dist folder.     
