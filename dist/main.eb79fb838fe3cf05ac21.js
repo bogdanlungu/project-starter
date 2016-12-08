@@ -1,0 +1,2 @@
+webpackJsonp([0],[function(n,e,t){"use strict";t(1);var c=document.getElementById("content");c.innerHTML=c.innerHTML+"Here comes stuff"},function(n,e){}]);
+//# sourceMappingURL=main.eb79fb838fe3cf05ac21.js.map
