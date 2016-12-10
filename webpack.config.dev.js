@@ -1,11 +1,13 @@
 import path from 'path';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
+import webpack from 'webpack';
 
 export default {
   debug: true,
   devtool: 'inline-source-map',
   noInfo: false,
   entry: [
+    'webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000&reload=true',
     path.resolve(__dirname, 'src/index')
   ],
   target: 'web',
@@ -19,7 +21,13 @@ export default {
     new HtmlWebpackPlugin({
       template: 'src/index.html',
       inject: true
-    })
+    }),
+
+    //
+    new webpack.optimize.OccurenceOrderPlugin(),
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.NoErrorsPlugin()
+
   ],
   module: {
     loaders: [
