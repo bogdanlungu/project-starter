@@ -23,7 +23,6 @@ export default {
       inject: true
     }),
 
-    //
     new webpack.optimize.OccurenceOrderPlugin(),
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoErrorsPlugin()
@@ -33,7 +32,8 @@ export default {
     loaders: [
       { test: /\.js$/, exclude: /node_modules/, loaders: ['babel'] },
       { test: /\.css$/, loaders: ['style', 'css'] },
-      { test: /\.scss$/, loaders: ["style-loader", "css-loader", "sass-loader"] }
+      { test: /\.scss$/, loaders: ["style-loader", "css-loader", "sass-loader"] },
+      { test: /\.html$/, loaders: ['html'] }
     ]
   }
 }
