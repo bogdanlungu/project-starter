@@ -46,7 +46,10 @@ export default {
   module: {
     loaders: [
       { test: /\.js$/, exclude: /node_modules/, loaders: ['babel'] },
-      { test: /\.scss$/, loader: ExtractTextPlugin.extract("style", "css!sass") }
+      { test: /\.scss$/, loader: ExtractTextPlugin.extract("style", "css!sass") },
+      { test: /\.html$/, loaders: ['html'] },
+      { test: /\.jpg$/, loader: "file-loader" },
+      { test: /\.png$/, loader: "url-loader?mimetype=image/png" }
     ]
   }
 }
