@@ -33,7 +33,9 @@ export default {
       { test: /\.js$/, exclude: /node_modules/, loaders: ['babel'] },
       { test: /\.css$/, loaders: ['style', 'css'] },
       { test: /\.scss$/, loaders: ["style-loader", "css-loader", "sass-loader"] },
-      { test: /\.html$/, loaders: ['html'] }
+      { test: /\.html$/, loaders: ['html'] },
+      { test: /\.jpg$/, loader: "file-loader" },
+      { test: /\.png$/, loader: "url-loader?mimetype=image/png" }
     ]
   }
 }
