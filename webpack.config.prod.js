@@ -49,7 +49,7 @@ export default {
       { test: /\.scss$/, loader: ExtractTextPlugin.extract("style", "css!sass") },
       { test: /\.html$/, loaders: ['html'] },
       { test: /\.jpg$/, loader: "file-loader" },
-      { test: /\.png$/, loader: "url-loader?mimetype=image/png" }
+      { test: /\.png$/, loader: "file-loader" }
     ]
   }
 }
